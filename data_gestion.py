@@ -46,3 +46,12 @@ def create_train_test_set(dataframe,
         test_features =test_dataset
         return train_features, train_labels, test_features, test_labels
 
+def norm(x):
+        """ Standardization of a dataset 
+                Arguments :
+                        x : pandas Dataframe contening the data to standardize
+                Output :
+                        a pandas DataFrame with standardize values
+        """
+        x_stats = x.describe().transpose()
+        return((x - x_stats['mean'])/x_stats['std'])
