@@ -7,6 +7,7 @@ from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.model_selection import KFold
 from sklearn.exceptions import NotFittedError
 import pandas as pd
+import numpy as np
 
 
 class StackedRegressor(BaseEstimator, RegressorMixin):
